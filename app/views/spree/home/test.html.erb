@@ -1,0 +1,16 @@
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+
+<div data-hook="homepage_products">
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+</div>
+
+
+<%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
+
+<h2><%= t("forem.topic.new") %></h2>
+
+<%= render "forem/topics/form" %>
