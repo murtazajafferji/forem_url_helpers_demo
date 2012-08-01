@@ -1,4 +1,6 @@
 ForemUrlHelpersDemo::Application.routes.draw do
+  mount Forem::Engine, :at => "/forums"
+  
   root :to => "spree/home#test"
 
   # This line mounts Spree's routes at the root of your application.
